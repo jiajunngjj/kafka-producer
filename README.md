@@ -4,7 +4,7 @@ This simulate the streaming of data. To use it, upload your CSV into data direct
 ## Running on OpenShift
 ```
 $ oc new-app python:3.6~https://github.com/jiajunngjj/kafka-producer \
-    -e BROKER_URL=my-cluster-kafka-brokers:9092 \
+    -e BROKER_URL=my-cluster-kafka-brokers.amq-streams.svc.cluster.local:9092:9092 \
     -e KAFKA_TOPIC=my-topic
 ```
 
